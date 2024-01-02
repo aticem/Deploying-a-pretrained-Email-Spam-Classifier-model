@@ -3,7 +3,7 @@ import pickle
 cv = pickle.load(open("models/cv.pkl", 'rb'))
 clf = pickle.load(open("models/clf.pkl", 'rb'))
 
-def make_prediction(email):
+def model_predict(email):
     if email == "":
         return ""
     tokenized_email = cv.transform([email]) # X 
